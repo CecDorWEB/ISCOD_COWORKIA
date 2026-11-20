@@ -1,0 +1,14 @@
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Java
+target/
+
+# Angular
+front/node_modules/
+front/dist/
+
+# Variables d'environnement
+.env
