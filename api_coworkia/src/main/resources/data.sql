@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS Role;
 
 CREATE TABLE Role (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	name VARCHAR(255) NOT NULL
+	name VARCHAR(25) NOT NULL
 );
 
 INSERT INTO Role (name) VALUES ('ADMIN'),('USER'),('ACCOUNTANT');
@@ -43,10 +43,12 @@ INSERT INTO Internal_user (name,firstname,email,password,role_id) VALUES
 	
 DROP TABLE IF EXISTS Site;
 
+
 CREATE TABLE Site (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255) NOT NULL
 );
+
 
 INSERT INTO Site (name) VALUES ('République');
 
@@ -76,8 +78,8 @@ DROP TABLE IF EXISTS Reservation;
 
 CREATE TABLE Reservation (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	starting_dateTime TIMESTAMP NOT NULL,
-	ending_dateTime TIMESTAMP NOT NULL,
+	starting_date TIMESTAMP NOT NULL,
+	ending_date TIMESTAMP NOT NULL,
 	reserved_on DATE NOT NULL,
 	internal_user_id INT NOT NULL,
 	post_id INT NOT NULL,
