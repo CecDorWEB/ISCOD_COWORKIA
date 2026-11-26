@@ -39,6 +39,12 @@ INSERT INTO Internal_user (name,firstname,email,password,role_id) VALUES
 		'bob.inette@iscod.fr',
 		'user',
 		2
+	),
+	(	'Clonna',
+		'Georges',
+		'geo.ina@nespresto.fr',
+		'user',
+		2
 	);
 	
 DROP TABLE IF EXISTS Site;
@@ -80,7 +86,7 @@ CREATE TABLE Reservation (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	starting_date TIMESTAMP NOT NULL,
 	ending_date TIMESTAMP NOT NULL,
-	reserved_on DATE NOT NULL,
+	reserved_on DATE NOT NULL DEFAULT CURRENT_DATE,
 	internal_user_id INT NOT NULL,
 	post_id INT NOT NULL,
 	FOREIGN KEY (internal_user_id) REFERENCES Internal_user(id) ,

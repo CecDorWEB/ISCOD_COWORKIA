@@ -2,6 +2,9 @@ package com.iscod.coworkia.entities;
 
 import java.sql.Date;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +23,7 @@ public class Reservation {
 	
 	private LocalDateTime endingDate;
 	
-	private LocalDateTime reservedOn = LocalDateTime.now();
+	private LocalDateTime reservedOn = LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS);
 	
 	@ManyToOne
 	@JoinColumn(name = "internalUser_id")

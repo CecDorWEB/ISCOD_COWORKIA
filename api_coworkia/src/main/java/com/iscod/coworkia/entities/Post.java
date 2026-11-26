@@ -3,6 +3,7 @@ package com.iscod.coworkia.entities;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
