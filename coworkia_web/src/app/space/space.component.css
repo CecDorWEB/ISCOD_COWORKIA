@@ -1,0 +1,32 @@
+.consult_container {
+  display: flex;
+  gap: 2em;
+}
+
+.selection_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.site_list ul {
+  padding-left: 2em;
+}
+
+.zone_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.zone_info,
+.post_info {
+  display: flex;
+  gap: 1em;
+}
+
+.zone_detail,
+.post_detail {
+  border: var(--border);
+  max-width: fit-content;
+  padding: 2em;
+}

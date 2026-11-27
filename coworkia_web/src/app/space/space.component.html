@@ -1,11 +1,51 @@
 <div class="banniere">
-  <h1>{{ title }} !</h1>
+  <h1>{{ title }}</h1>
 </div>
-<section>
-  <div><span>id: </span>{{ space.id }}</div>
-  <div><span>name: </span>{{ space.name }}</div>
-  <div>
-    <label for="name">Space name: </label>
-    <input id="name" [(ngModel)]="space.name" placeholder="name" />
+<section class="consult_container">
+  <div class="selection_menu">
+    <h2><label for="site-select">Choix du site :</label></h2>
+    <select name="sites" id="site-select" [(ngModel)]="selectedSite">
+      <option [ngValue]="undefined">--Veuillez choisir une option--</option>
+      <option *ngFor="let site of sites" [ngValue]="site">
+        {{ site.name }}
+      </option>
+    </select>
+    <br />
+    <h2><label for="zone-select">Choisissez une zone :</label></h2>
+    <select name="zones" id="zone-select" [(ngModel)]="selectedZone">
+      <option [ngValue]="undefined">--Veuillez choisir une option--</option>
+      <option *ngFor="let zone of selectedSite?.zones" [ngValue]="zone">
+        {{ zone.name }}
+      </option>
+    </select>
+    <br />
+    <h2><label for="post-select">Choisissez un bureau :</label></h2>
+    <select name="posts" id="post-select" [(ngModel)]="selectedPost">
+      <option [ngValue]="undefined">--Veuillez choisir une option--</option>
+      <option *ngFor="let post of selectedZone?.posts" [ngValue]="post">
+        {{ post.code }}
+      </option>
+    </select>
+  </div>
+
+  <div class="zone_list" *ngIf="selectedSite && !selectedZone">
+    <p>Liste des zones du site :</p>
+
+    <ul class="zone_info">
+      <li *ngFor="let zone of selectedSite?.zones" class="zone_detail">
+        <p>{{ zone.name }} [{{ zone.acronyme }}]</p>
+        <p>{{ zone.posts.length }} postes</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="zone_list" *ngIf="selectedSite && selectedZone && !selectedPost">
+    <p>Liste des bureaux de la zone:</p>
+
+    <ul class="post_info">
+      <li *ngFor="let post of selectedZone?.posts" class="post_detail">
+        <p>{{ post.code }}</p>
+      </li>
+    </ul>
   </div>
 </section>

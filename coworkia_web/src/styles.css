@@ -56,10 +56,14 @@ p {
 
 li,
 a {
-  list-style: none;
   text-decoration: none;
-  color: var(--background_color_light);
+  list-style: none;
   font-family: var(--principal_font);
+}
+
+header li,
+header a {
+  color: var(--background_color_light);
 }
 
 /*Header et Barre de navigation*/
