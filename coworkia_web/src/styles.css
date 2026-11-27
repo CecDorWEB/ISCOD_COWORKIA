@@ -14,6 +14,7 @@
 
   /*Border*/
   --border: 1px solid #dfe3e8;
+  --radius: 8px;
 }
 
 * {
@@ -69,6 +70,7 @@ header a {
 /*Header et Barre de navigation*/
 header {
   display: flex;
+  flex-direction: column;
   background-color: var(--primary_color);
   justify-content: space-between;
   align-items: center;
@@ -87,9 +89,10 @@ nav {
 
 nav > a {
   display: flex;
-  padding: 1.5em 2em;
   height: 100%;
+  padding: 1.5em 0.5em;
   border-bottom: 4px solid transparent;
+  text-align: center;
 }
 
 nav > a:hover {
@@ -149,4 +152,20 @@ button:disabled {
 /*Section*/
 section {
   margin: 1em 4em;
+}
+
+/* Tablette */
+@media (min-width: 768px) {
+  /*Header et Barre de navigation*/
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  /*Header et Barre de navigation*/
+  nav > a {
+    padding: 1.5em 2em;
+  }
 }

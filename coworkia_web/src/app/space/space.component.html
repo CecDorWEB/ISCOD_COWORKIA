@@ -29,7 +29,7 @@
   </div>
 
   <div class="zone_list" *ngIf="selectedSite && !selectedZone">
-    <p>Liste des zones du site :</p>
+    <h2>Liste des zones du site :</h2>
 
     <ul class="zone_info">
       <li *ngFor="let zone of selectedSite?.zones" class="zone_detail">
@@ -39,8 +39,8 @@
     </ul>
   </div>
 
-  <div class="zone_list" *ngIf="selectedSite && selectedZone && !selectedPost">
-    <p>Liste des bureaux de la zone:</p>
+  <div class="post_list" *ngIf="selectedSite && selectedZone && !selectedPost">
+    <h2>Liste des bureaux de la zone:</h2>
 
     <ul class="post_info">
       <li *ngFor="let post of selectedZone?.posts" class="post_detail">
