@@ -1,0 +1,137 @@
+:root {
+  /*Colors*/
+  --background_color: #f3f0eb;
+  --background_color_light: #fdf8f2;
+  --border_color: #dfe3e8;
+  --primary_color: #203552;
+  --primary_color_light: #2c5282;
+  --secondary_color: #71c9d5;
+  --secondary_color_light: #71c9d5;
+
+  /*Text*/
+  --principal_font: "Manrope", sans-serif;
+  --secondary_font: "Inter", sans-serif;
+
+  /*Border*/
+  --border: 1px solid #dfe3e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background_color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  font-family: var(--principal_font);
+  font-size: 2em;
+}
+
+h2 {
+  font-family: var(--secondary_font);
+  font-size: 1.25em;
+}
+
+p {
+  font-family: var(--principal_font);
+  font-size: 1em;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--background_color_light);
+  font-family: var(--principal_font);
+}
+
+/*Header et Barre de navigation*/
+header {
+  display: flex;
+  background-color: var(--primary_color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 2em;
+  color: var(--background_color_light);
+}
+
+header > img {
+  max-width: 14em;
+}
+
+nav {
+  display: flex;
+  height: 100%;
+}
+
+nav > a {
+  display: flex;
+  padding: 1.5em 2em;
+  height: 100%;
+  border-bottom: 4px solid transparent;
+}
+
+nav > a:hover {
+  box-sizing: border-box;
+  background-color: var(--primary_color_light);
+  border-bottom: 4px solid var(--secondary_color);
+}
+
+/*Footer*/
+footer {
+  background-color: var(--background_color_light);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: var(--border);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/*Main*/
+.banniere {
+  display: flex;
+  height: 10em;
+  padding: 1em 4em;
+  background-image: linear-gradient(black, white);
+  background-image: url("../public/Banniere.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: end;
+  color: white;
+}
