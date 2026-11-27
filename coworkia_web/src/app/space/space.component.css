@@ -35,6 +35,8 @@
 .zone_info,
 .post_info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   gap: 1em;
 }
 
@@ -44,5 +46,6 @@
   background-color: var(--background_color_light);
   border-radius: var(--radius);
   max-width: fit-content;
+  min-width: 120px;
   padding: 2em;
 }
