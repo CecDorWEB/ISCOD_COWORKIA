@@ -8,16 +8,18 @@
   flex-direction: column;
   padding: 2em;
   border-radius: var(--radius);
-  gap: 0.5em;
+  gap: 1em;
   border: 1px solid var(--primary_color);
   background-color: var(--background_color_light);
 }
 
-.selection_menu select,
-.selection_menu select option {
+.select_item select,
+.select_item select option,
+.select_item input {
   font-family: var(--principal_font);
   border-radius: var(--radius);
-  padding: 0.5em;
+  border: 1px solid var(--primary_color);
+  padding: 0.25em;
   font-size: 1em;
 }
 
@@ -48,4 +50,7 @@
   max-width: fit-content;
   min-width: 120px;
   padding: 2em;
+}
+
+.reservation_detail {
 }
