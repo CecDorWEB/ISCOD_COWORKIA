@@ -1,0 +1,11 @@
+<div class="banniere">
+  <h1>{{ title }} !</h1>
+</div>
+<section>
+  <div><span>id: </span>{{ space.id }}</div>
+  <div><span>name: </span>{{ space.name }}</div>
+  <div>
+    <label for="name">Space name: </label>
+    <input id="name" [(ngModel)]="space.name" placeholder="name" />
+  </div>
+</section>

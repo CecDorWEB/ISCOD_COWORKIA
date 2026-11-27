@@ -1,3 +1,16 @@
-<div class="banniere">
-  <h1>Bienvenue sur {{ title }} !</h1>
-</div>
+<header>
+  <img src="Logo_blanc_complet.png" />
+  <nav>
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/spaces">Consulter les Sites</a>
+    <a href="#">Réservations</a>
+    <a href="#">Tableau de bords</a>
+  </nav>
+  <li>Connexion</li>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <p>© 2026 Coworkia - Tous droits réservés</p>
+</footer>

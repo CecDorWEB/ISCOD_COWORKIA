@@ -29,6 +29,12 @@ body {
   flex-direction: column;
 }
 
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   flex: 1;
 }
@@ -134,4 +140,9 @@ button:disabled {
   background-size: cover;
   align-items: end;
   color: white;
+}
+
+/*Section*/
+section {
+  margin: 1em 4em;
 }
